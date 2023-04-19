@@ -9,6 +9,13 @@
 </head>
 <body>
 	<h2>Factures</h2>
+		<ul>
+ 			<li><a href="FacturesSimple">Montrer une liste de factures</a></li>
+  			<li><a href="FacturesDetailles">Montrer une liste de factures détaillés</a></li>
+  			<li><a href="SoldesClients">Consulter le soldes des clients</a></li>
+		</ul>
+	
+	
 
 </body>
 </html>

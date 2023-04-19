@@ -8,16 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class FacturesControleur
+ * Servlet implementation class FacturesDetailles
  */
-@WebServlet("/FacturesControleur")
-public class FacturesControleur extends HttpServlet {
+@WebServlet("/FacturesDetailles")
+public class FacturesDetailles extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public FacturesControleur() {
+    public FacturesDetailles() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -26,7 +27,7 @@ public class FacturesControleur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/menuVue.jsp").forward(request, response);
+		request.getRequestDispatcher("/facturesdetaillesVue.jsp").forward(request, response);
 	}
 
 	/**
