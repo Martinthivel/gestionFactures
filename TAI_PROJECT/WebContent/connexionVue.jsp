@@ -17,17 +17,18 @@
                 <h3>Logiciel de gestion des factures clients</h3>
             </header>
 
-            <form id="connexionForm">
-                <h2>Connexion</h2>
-                <label for="username">Nom d'utilisateur :</label>
-                <input type="text" id="username" name="username">
-                <br>
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password">
-                <br>
-                <input type="submit" value="Se connecter">
-            </form>
-
+            <div class="connexionForm">
+                <form>
+                    <h2>Connexion</h2>
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password">
+                    <br>
+                    <input type="submit" value="Se connecter">
+                </form>
+            </div>
 
         </body>
 
