@@ -1,14 +1,14 @@
-public class Commandes_produitBeanModele {
+public class Commande_produitBeanModele {
     private int id;
     private int idCommande;
     private int idProduit;
     private int quantite;
 
-    public Commandes_produitBeanModele() {
+    public Commande_produitBeanModele() {
         // Constructeur par défaut sans arguments
     }
 
-    public Commandes_produitBeanModele(int id, int idCommande, int idProduit, int quantite) {
+    public Commande_produitBeanModele(int id, int idCommande, int idProduit, int quantite) {
         this.id = id;
         this.idCommande = idCommande;
         this.idProduit = idProduit;

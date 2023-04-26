@@ -1,17 +1,19 @@
-public class employeBeanModele {
+public class EmployeBeanModele {
     private int id;
     private String nom;
+    private String prenom;
     private String identifiantConnexion;
     private String mdp;
     private String role;
 
-    public employeBeanModele() {
+    public EmployeBeanModele() {
         // Constructeur par défaut sans arguments
     }
 
-    public employeBeanModele(int id, String nom, String identifiantConnexion, String mdp, String role) {
+    public EmployeBeanModele(int id, String nom, String prenom, String identifiantConnexion, String mdp, String role) {
         this.id = id;
         this.nom = nom;
+        this.prenom = prenom;
         this.identifiantConnexion = identifiantConnexion;
         this.mdp = mdp;
         this.role = role;
@@ -33,6 +35,14 @@ public class employeBeanModele {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+    
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     public String getIdentifiantConnexion() {

@@ -1,9 +1,8 @@
 import java.util.Date;
 
-public class CommandesBeanModele {
+public class CommandeBeanModele {
     private int id;
     private int id_client;
-    private String clients;
     private double montant;
     private Date date_commande;
 
@@ -11,14 +10,13 @@ public class CommandesBeanModele {
     // Getters et Setters pour chaque attribut
 
     // Constructeur par défaut
-    public CommandesBeanModele() {
+    public CommandeBeanModele() {
     }
 
     // Constructeur avec tous les attributs
-    public CommandesBeanModele(int id, int id_client, String clients, double montant, Date date_commande) {
+    public CommandeBeanModele(int id, int id_client, double montant, Date date_commande) {
         this.id = id;
         this.id_client = id_client;
-        this.clients = clients;
         this.montant = montant;
         this.date_commande = date_commande;
     }
@@ -38,14 +36,6 @@ public class CommandesBeanModele {
 
     public void setId_client(int id_client) {
         this.id_client = id_client;
-    }
-
-    public String getClients() {
-        return clients;
-    }
-
-    public void setClients(String clients) {
-        this.clients = clients;
     }
 
     public double getMontant() {
