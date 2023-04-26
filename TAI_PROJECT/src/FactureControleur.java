@@ -26,7 +26,7 @@ public class FacturesControleur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/connexionVue.jsp").forward(request, response);
+		request.getRequestDispatcher("/factureVue.jsp").forward(request, response);
 	}
 
 	/**
