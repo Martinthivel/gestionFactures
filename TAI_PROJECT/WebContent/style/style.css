@@ -1,34 +1,113 @@
-h1 {
-    color: black;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40pt;
-    margin: 0px;
-}
-
-h2 {
-    color: black;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20pt;
-    margin: 0px;
-}
-
-h3 {
-    color: red;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25pt;
-    margin: 0px;
-}
-
-header {
-    border-bottom: solid 5px black;
-}
-
-#connexionForm {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
+    h1 {
+        color: black;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40pt;
+        margin: 0px;
+    }
+    
+    h2 {
+        color: black;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20pt;
+        margin: 0px;
+    }
+    
+    h3 {
+        color: red;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25pt;
+        margin: 0px;
+    }
+    
+    h4 {
+        color: black;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30pt;
+        margin: 0px;
+    }
+    
+    h5 {
+        color: black;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12pt;
+        margin: 0px;
+    }
+    
+    label {
+        color: black;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12pt;
+        margin: 0px;
+    }
+    
+    header {
+        border-bottom: solid 5px black;
+    }
+    
+    #connexionForm {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border: 3px black solid;
+        border-radius: 10px;
+        padding: 1%;
+    }
+    
+    .sectionHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .deconnexionButton {
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .deconnexionButton:hover {
+        background-color: white;
+        color: black;
+        border: solid 2px red;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    }
+    
+    .commandeArticle {
+        border: 5px black solid;
+    }
+    
+    .ArticleHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .clientDiv {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ProduitDiv {
+        display: flex;
+        flex-direction: column;
+    }

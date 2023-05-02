@@ -18,7 +18,7 @@
             </header>
 
             <form id="connexionForm" action="ProduitAjoutControleur" method="post">
-                <h2>Connexion</h2>
+                <h2>Identification</h2>
                 <label for="username">Nom d'utilisateur :</label>
                 <input type="text" name="Username" /> <br />
                 <label for="password">Mot de passe :</label>
@@ -26,6 +26,7 @@
                 <input type="submit" value="Se connecter">
             </form>
 
+            <a href="commandeVue.jsp">test</a>
 
         </body>
 
