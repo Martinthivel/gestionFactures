@@ -1,5 +1,5 @@
 
-public class ClientsBeanModele {
+public class ClientBeanModele {
 	private int id;
 	private String nom;
 	private String adresse_numero;
@@ -10,7 +10,7 @@ public class ClientsBeanModele {
 	private String tel;
 	
 	//Constructeur vide
-	public ClientsBeanModele() {
+	public ClientBeanModele() {
 		
 	}
 	

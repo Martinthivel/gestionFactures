@@ -64,4 +64,39 @@ public class EmployeDAOModele {
         }
         return listeEmploye;
     }
+
+    public EmployeBeanModele seConnecter(String identifiantConnexion, String mdp) throws SQLException {
+    	ConnexionBDDModele connexionBDD = new ConnexionBDDModele();
+    	Connection connexion = connexionBDD.getConnexion();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        EmployeBeanModele employe = null;
+        try {
+            // Récupération de la connexion à la base de données
+            String sql = "SELECT * FROM employe WHERE identifiant_connexion=? AND mdp=?";
+            preparedStatement = connexion.prepareStatement(sql);
+            preparedStatement.setString(1, identifiantConnexion);
+            preparedStatement.setString(2, mdp);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int idEmploye = resultSet.getInt("id");
+                String nom = resultSet.getString("nom");
+                String prenom = resultSet.getString("prenom");
+                String role = resultSet.getString("role");
+                employe = new EmployeBeanModele(idEmploye, nom, prenom, identifiantConnexion, mdp, role);
+            }
+        } finally {
+            if (resultSet != null) {
+                resultSet.close();
+            }
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (connexion != null) {
+                connexion.close();
+            }
+        }
+        return employe;
+    }
+
 }

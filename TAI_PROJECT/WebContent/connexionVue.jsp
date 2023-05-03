@@ -16,13 +16,16 @@
                 <h2>Euskal Herriko Informatic Company</h2>
                 <h3>Logiciel de gestion des factures clients</h3>
             </header>
-
-            <form id="connexionForm" action="ProduitAjoutControleur" method="post">
+<c:if test="${not empty messageErreur}">
+    <p class="error">${messageErreur}</p>
+</c:if>
+            <form id="connexionForm" action="connexionControleur" method="post">
                 <h2>Identification</h2>
-                <label for="username">Nom d'utilisateur :</label>
-                <input type="text" name="Username" /> <br />
-                <label for="password">Mot de passe :</label>
-                <input type="text" name="password" /> <br />
+                <label for="identifiantConnexion">Nom d'utilisateur :</label>
+				<input type="text" name="identifiantConnexion" /> <br />
+				<label for="mdp">Mot de passe :</label>
+				<input type="password" name="mdp" /> <br />
+
                 <input type="submit" value="Se connecter">
             </form>
 

@@ -5,16 +5,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientsDAOModele {
+public class ClientDAOModele {
     private Connection connexion;
 
     // Constructeur pour établir la connexion à la base de données
-    public ClientsDAOModele(Connection connexion) {
+    public ClientDAOModele(Connection connexion) {
         this.connexion = connexion;
     }
 
     // Méthode pour créer un nouveau client dans la base de données
-    public int creer(ClientsBeanModele client) throws SQLException {
+    public int creer(ClientBeanModele client) throws SQLException {
         int resultat = 0;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -50,8 +50,8 @@ public class ClientsDAOModele {
     }
 
     // Méthode pour lire la liste des clients depuis la base de données
-    public List<ClientsBeanModele> lireListe() throws SQLException {
-        List<ClientsBeanModele> listeClients = new ArrayList<>();
+    public List<ClientBeanModele> lireListe() throws SQLException {
+        List<ClientBeanModele> listeClients = new ArrayList<>();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         String requete = "SELECT id, nom, adresse_numero, adresse_voie, adresse_cp, adresse_ville, email, tel FROM clients";
@@ -62,7 +62,7 @@ public class ClientsDAOModele {
 
             // Parcourir les résultats de la requête et créer des objets ClientsBeanModele
             while (resultSet.next()) {
-                ClientsBeanModele client = new ClientsBeanModele();
+                ClientBeanModele client = new ClientBeanModele();
                 client.setId(resultSet.getInt("id"));
                 client.setNom(resultSet.getString("nom"));
                 client.setAdresse_num(resultSet.getString("adresse_numero"));
