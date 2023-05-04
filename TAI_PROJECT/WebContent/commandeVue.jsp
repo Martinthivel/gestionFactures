@@ -41,16 +41,48 @@
                         <h5>Produit :</h5>
 
                         <label for="produit-select">Produit :</label>
-                        <input type="text" id="produit-select">
+                        <select name="produits" id="produit-select">
+                            <option value="">--Please choose an option--</option>
+                            <option value="client1">produit 1</option>
+                            <option value="client2">produit 2</option>
+                            <option value="client3">produit 3</option>
+                            <option value="client4">produit 4</option>
+                        </select>
                         <label for="qte-select">Quantite :</label>
                         <input type="text" id="qte-select">
                         <button class="ajouterButton">Ajouter</button>
                     </div>
                 </div>
                 <div class="TableauProduit">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ref</th>
+                                <th>Produit</th>
+                                <th>Prix unitaire</th>
+                                <th>Client</th>
+                                <th>Quantite</th>
+                                <th>Prix total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- A chaque fois, il faut ajouter une balise <tr> comme ci dessous avec des balises <td> qui 
+                                integrent le contenu des tables de la BDD -->
+                            <tr>
+                                <td>1</td>
+                                <td>Produit 1</td>
+                                <td>10</td>
+                                <td>Client A</td>
+                                <td>2</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
+                <div class="articleFooter">
 
+                </div>
             </article>
         </section>
     </body>

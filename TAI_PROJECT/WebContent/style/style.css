@@ -99,15 +99,40 @@
     .ArticleHeader {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+        border-bottom: 5px black solid;
     }
     
     .clientDiv {
         display: flex;
         flex-direction: column;
+        padding: 1%;
     }
     
     .ProduitDiv {
         display: flex;
         flex-direction: column;
+        padding: 1%;
+    }
+    
+    .TableauProduit {
+        display: flex;
+        justify-content: center;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Courier, monospace;
+    }
+    
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+    
+    thead tr {
+        background-color: #444444;
+        color: #FFFFFF;
     }
