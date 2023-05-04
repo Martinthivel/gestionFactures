@@ -81,7 +81,18 @@
 
                 </div>
                 <div class="articleFooter">
-
+                    <table class="totalCommandeTable">
+                        <thead>
+                            <tr>
+                                <th>Montant total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XXX</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </article>
         </section>

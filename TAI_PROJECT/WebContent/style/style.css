@@ -103,6 +103,11 @@
         border-bottom: 5px black solid;
     }
     
+    .articleFooter {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
     .clientDiv {
         display: flex;
         flex-direction: column;
@@ -124,6 +129,12 @@
         width: 100%;
         border-collapse: collapse;
         font-family: Courier, monospace;
+    }
+    
+    .totalCommandeTable {
+        width: 20%;
+        margin-top: 1%;
+        margin-bottom: 1%;
     }
     
     th,

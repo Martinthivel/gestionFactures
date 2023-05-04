@@ -29,7 +29,10 @@
                 <input type="submit" value="Se connecter">
             </form>
 
-            <a href="commandeVue.jsp">test</a>
+            <a href="commandeVue.jsp">commandes</a>
+            <a href="financeVue.jsp">finances</a>
+            <a href="expeditionVue.jsp">expedition</a>
+            
 
         </body>
 
