@@ -45,7 +45,7 @@ public class connexionControleur extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		  seConnecter(request, response);
-		  doGet(request, response);
+		//  request.getRequestDispatcher("/clientVue.jsp").forward(request, response);
 		}
 
 
@@ -73,7 +73,7 @@ public class connexionControleur extends HttpServlet {
 
         // Rediriger l'utilisateur vers la page appropriée
         try {
-			response.sendRedirect("connexionVue.jsp");
+			response.sendRedirect("clientVue.jsp");// ici on met la page vers laquelle on redirige
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
