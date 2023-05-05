@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
 
@@ -26,14 +28,20 @@
                     <div class="clientDiv">
                         <h5>Commande :</h5>
 
-                        <label for="client-select">Designation client :</label>
-                        <select name="clients" id="client-select">
-                        <option value="">--Please choose an option--</option>
-                        <option value="client1">client 1</option>
-                        <option value="client2">client 2</option>
-                        <option value="client3">client 3</option>
-                        <option value="client4">client 4</option>
-                    </select>
+                      <label for="client-select">Designation client :</label>
+						<select name="clients" id="client-select">
+  						<option value="">--Please choose an option--</option>
+ 						 <% 
+ 						List<ClientBeanModele> clients = new ClientDAOModele().getAllClients();
+    					for(ClientBeanModele client : clients) { 
+  							%>
+  						  <option value="<%= client.getId() %>"><%= client.getNom() %></option>
+ 							 <% 
+ 							   } 
+ 							 %>
+							</select>
+
+
                         <label for="n-client-select">Numero client :</label>
                         <input type="text" id="n-client-select">
                     </div>

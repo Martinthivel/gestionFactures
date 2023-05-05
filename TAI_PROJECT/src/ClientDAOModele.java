@@ -8,6 +8,10 @@ import java.util.List;
 public class ClientDAOModele {
     private Connection connexion;
 
+    public ClientDAOModele() {
+        // code du constructeur par défaut (s'il y a lieu)
+    }
+    
     // Constructeur pour établir la connexion à la base de données
     public ClientDAOModele(Connection connexion) {
         this.connexion = connexion;
@@ -85,4 +89,24 @@ public class ClientDAOModele {
 
         return listeClients;
     }
+
+    public List<ClientBeanModele> getAllClients() {
+        List<ClientBeanModele> clients = new ArrayList<>();
+
+        try {
+            ConnexionBDDModele connexionBDD = new ConnexionBDDModele();
+            Connection con = connexionBDD.getConnexion();
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM clients");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ClientBeanModele client = new ClientBeanModele();
+                clients.add(client);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return clients;
+    }
+
 }
